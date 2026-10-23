@@ -1,3 +1,4 @@
+namespace ChargeHub.pricing;
 public class DcStation : ChargingStation
 { public DcStation(string id)
 :base(id, 150m)
