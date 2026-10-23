@@ -7,5 +7,5 @@ protected ChargingStation(string id, decimal maxKw)
     Id = id;
     MaxKw = maxKw;
 }
-public abstract decimal CalculatePrice(decimal kWh, DateTime startTime, DateTime endTime);
+public abstract decimal CalculatePrice(decimal kWh);
 }
