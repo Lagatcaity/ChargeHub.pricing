@@ -2,7 +2,7 @@ using System;
 
 namespace ChargeHub.Pricing;
 
-    public class Vehicle
+    public class Vehicle : IReportable
     {
         public string Id { get; }
         public double BatteryKwh { get; }
@@ -32,4 +32,8 @@ namespace ChargeHub.Pricing;
             double increasedPercent = (kwh / BatteryKwh) * 100;
             Percent = (int)Math.Min(100, Percent + increasedPercent);
         }
-    }
+    
+    public string GetReport()
+    {
+      return $"Bil {Id}: {Percent} %";
+    }}
