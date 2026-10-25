@@ -21,7 +21,18 @@ classDiagram
 
     ChargingStation <|-- AcStation
     ChargingStation <|-- DcStation
-```
+    class Vehicle{
+        +string Id
+        +double Batterykwh
+        +int percent
+        +GetReport()string
+
+    }
+    Interface IReportable
+```{+GetReport()string
+}
+Vehicle..|> IReportable
+ChargingStation..|> IReportable
 
 ## Resultat
 
