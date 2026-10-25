@@ -39,10 +39,7 @@ classDiagram
     ChargingStation <|-- DcStation
     Vehicle ..|> IReportable
     ChargingStation ..|> IReportable
-```{+GetReport()string
-}
-Vehicle..|> IReportable
-ChargingStation..|> IReportable
+```
 
 ## Resultat
 
