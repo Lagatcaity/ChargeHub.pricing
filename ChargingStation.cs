@@ -1,5 +1,5 @@
 namespace ChargeHub.Pricing;
-public abstract class ChargingStation
+public abstract class ChargingStation : IReportable
 { public string Id { get; }
 public decimal MaxKw {get; }
 protected ChargingStation(string id, decimal maxKw)
@@ -8,4 +8,8 @@ protected ChargingStation(string id, decimal maxKw)
     MaxKw = maxKw;
 }
 public abstract decimal CalculatePrice(decimal kWh);
+public string GetReport()
+{
+    return $"Station {Id}: {MaxKw} kW";
+}
 }
