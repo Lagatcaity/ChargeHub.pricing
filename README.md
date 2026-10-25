@@ -16,19 +16,29 @@ classDiagram
         <<abstract>>
         +string Id
         +decimal MaxKw
-        +CalculatePrice(decimal kwh) decimal*
+        +CalculatePrice(decimal kwh) decimal
+        +GetReport() string
+    }
+
+    class AcStation
+    class DcStation
+
+    class Vehicle {
+        +string Id
+        +double BatteryKwh
+        +int Percent
+        +GetReport() string
+    }
+
+    class IReportable {
+        <<interface>>
+        +GetReport() string
     }
 
     ChargingStation <|-- AcStation
     ChargingStation <|-- DcStation
-    class Vehicle{
-        +string Id
-        +double Batterykwh
-        +int percent
-        +GetReport()string
-
-    }
-    Interface IReportable
+    Vehicle ..|> IReportable
+    ChargingStation ..|> IReportable
 ```{+GetReport()string
 }
 Vehicle..|> IReportable
