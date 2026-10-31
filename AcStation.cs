@@ -1,4 +1,4 @@
-using ChargeHub.Pricing;
+
 public class AcStation : ChargingStation
 { public AcStation(string id)
 :base(id, 11m)

@@ -1,4 +1,4 @@
-using ChargeHub.Pricing;
+
 public abstract class ChargingStation
 { public string Id { get; }
 public decimal MaxKw {get; }
